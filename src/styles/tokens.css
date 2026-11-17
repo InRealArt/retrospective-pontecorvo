@@ -1,0 +1,166 @@
+@theme {
+  --color-gallery-50: #faf9f8;
+  --color-gallery-100: #f5f4f0;
+  --color-gallery-200: #e6e4df;
+  --color-gallery-800: #1c1a17;
+  --color-gallery-900: #0f0e0d;
+  --color-accent-gold: #b8860b;
+  --color-accent-gold-light: #d4af37;
+  --color-white: #ffffff;
+
+  --color-paper: var(--color-gallery-50);
+  --color-paper-alt: var(--color-gallery-100);
+  --color-surface: var(--color-white);
+  --color-ink: var(--color-gallery-900);
+  --color-ink-raised: var(--color-gallery-800);
+  --color-ink-soft: color-mix(in oklab, var(--color-gallery-900) 60%, var(--color-gallery-50));
+  --color-line: color-mix(in oklab, var(--color-gallery-900) 8%, transparent);
+  --color-line-strong: var(--color-gallery-200);
+  --color-accent: color-mix(in oklab, var(--color-accent-gold) 70%, var(--color-gallery-900));
+  --color-accent-deco: var(--color-accent-gold);
+  --color-accent-on-dark: var(--color-accent-gold-light);
+  --color-paper-soft: color-mix(in oklab, var(--color-gallery-50) 70%, var(--color-gallery-900));
+  --color-line-on-dark: color-mix(in oklab, var(--color-gallery-50) 14%, transparent);
+
+  --ease-gallery: cubic-bezier(0.16, 1, 0.3, 1);
+  --radius-none: 0;
+}
+
+@theme inline {
+  --font-display: var(--font-playfair-display), "Times New Roman", serif;
+  --font-body: var(--font-plus-jakarta-sans), system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+  }
+
+  .on-dark :focus-visible {
+    outline-color: var(--color-accent-on-dark);
+  }
+}
+
+@layer components {
+  .font-serif-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+  }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .on-dark {
+    background-color: var(--color-ink);
+    color: var(--color-paper);
+  }
+
+  .on-dark .eyebrow {
+    color: var(--color-accent-on-dark);
+  }
+
+  .luxury-card {
+    background-color: var(--color-surface);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-none);
+    transition: all 0.4s var(--ease-gallery);
+  }
+
+  .luxury-card:hover {
+    border-color: var(--color-accent-deco);
+    transform: translateY(-2px);
+  }
+
+  .btn-perrotin,
+  .btn-perrotin-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0.875rem 1.75rem;
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-radius: var(--radius-none);
+    transition: all 0.3s ease;
+  }
+
+  .btn-perrotin {
+    background-color: var(--color-ink);
+    color: var(--color-white);
+    border: 1px solid var(--color-ink);
+  }
+
+  .btn-perrotin:hover {
+    background-color: var(--color-ink-raised);
+    border-color: var(--color-accent-deco);
+  }
+
+  .btn-perrotin-outline {
+    background-color: transparent;
+    color: var(--color-ink);
+    border: 1px solid var(--color-ink);
+  }
+
+  .btn-perrotin-outline:hover {
+    background-color: var(--color-ink);
+    color: var(--color-white);
+  }
+
+  .on-dark .btn-perrotin {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    border-color: var(--color-paper);
+  }
+
+  .on-dark .btn-perrotin-outline {
+    color: var(--color-paper);
+    border-color: var(--color-paper);
+  }
+
+  .on-dark .btn-perrotin-outline:hover {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+  }
+
+  .link-accent {
+    color: var(--color-accent);
+    text-decoration: underline;
+    text-decoration-color: var(--color-line-strong);
+    text-underline-offset: 0.25em;
+    transition: text-decoration-color 0.3s ease;
+  }
+
+  .link-accent:hover {
+    text-decoration-color: var(--color-accent);
+  }
+
+  .rule {
+    border-top: 1px solid var(--color-line);
+  }
+
+  .rule-gold {
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background-color: var(--color-accent-deco);
+  }
+}
