@@ -1,7 +1,7 @@
 const items = [
   {
     q: "En quoi consiste la rétrospective consacrée à Alain Pontecorvo ?",
-    a: "[Présentation de l’exposition : nombre d’œuvres, périodes couvertes, parcours de visite.]",
+    a: "La rétrospective réunit 19 œuvres d’Alain Pontecorvo à la Galerie Leadouze, du 13 novembre au 12 décembre 2026. Présentée sur les deux niveaux de la galerie, salle d’exposition et mezzanine, elle donne à voir les grands formats, dont Burning Man (huile sur toile, 130 × 195 cm), comme les œuvres plus intimes. Un vernissage privé, avec rencontre autour de l’art et du collectionnisme, ouvre l’exposition le 12 novembre 2026. Les œuvres présentées sont disponibles à l’acquisition.",
   },
   {
     q: "Quels sont les horaires d’ouverture ?",
