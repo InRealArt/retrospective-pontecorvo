@@ -61,6 +61,10 @@
     "page": {
       "status": "done",
       "inputsHash": "6398500f0dc97df79d294b7245284274c539835209deacb67574b21b0a09a3ef"
+    },
+    "legal-mentions-legales": {
+      "status": "done",
+      "inputsHash": "b0ae0b82059dbab6fe38880c130fc9756c7bca307c11916b9863697796fe1777"
     }
   },
   "modules": {},
