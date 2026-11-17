@@ -49,6 +49,10 @@
     "build:contact": {
       "status": "done",
       "inputsHash": "3c98b5bbd25a5c230c382eda29f5f09ae9adc6b6ee49d35b97779574ebef9f0a"
+    },
+    "build:faq": {
+      "status": "done",
+      "inputsHash": "82407d084516b08a6034eb90a83bbefcbfd6497d1f99c2a983903b59755ec29d"
     }
   },
   "modules": {},
