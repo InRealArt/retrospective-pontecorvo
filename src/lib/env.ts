@@ -7,11 +7,8 @@ const SECRET_LOOKING = /SECRET|PRIVATE|PASSWORD|TOKEN|API_KEY/
 const serverEnvSchema = z.object({
   TURNSTILE_SECRET_KEY: z.string().min(1),
   BREVO_API_KEY: z.string().min(1),
-  BREVO_SENDER_EMAIL: z.email(),
-  BREVO_SENDER_NAME: z.string().min(1).default('Site'),
-  CONTACT_TO: z.email(),
-  /** Brevo list that receives each visitor as a contact; unset means no contact is created. */
-  BREVO_CONTACTS_LIST_ID: z.coerce.number().int().positive().optional(),
+  /** Brevo list that receives each visitor as a contact. */
+  BREVO_CONTACTS_LIST_ID: z.coerce.number().int().positive(),
   NEXT_PUBLIC_TURNSTILE_SITE_KEY: z.string().optional(),
   /** Hostname Turnstile must report; set to "localhost" in development. */
   SITE_HOSTNAME: z.string().min(1).optional(),

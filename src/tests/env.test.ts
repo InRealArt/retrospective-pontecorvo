@@ -4,16 +4,15 @@ import { parseServerEnv } from '../lib/env'
 const ok = {
   TURNSTILE_SECRET_KEY: 'secret',
   BREVO_API_KEY: 'xkeysib-test',
-  BREVO_SENDER_EMAIL: 'site@example.com',
-  CONTACT_TO: 'contact@example.com',
+  BREVO_CONTACTS_LIST_ID: '7',
 }
 
 describe('parseServerEnv', () => {
   it('accepts a complete environment', () => {
-    expect(parseServerEnv(ok).CONTACT_TO).toBe('contact@example.com')
+    expect(parseServerEnv(ok).BREVO_CONTACTS_LIST_ID).toBe(7)
   })
 
-  it.each(['TURNSTILE_SECRET_KEY', 'BREVO_API_KEY', 'BREVO_SENDER_EMAIL', 'CONTACT_TO'])(
+  it.each(['TURNSTILE_SECRET_KEY', 'BREVO_API_KEY', 'BREVO_CONTACTS_LIST_ID'])(
     'throws when %s is missing',
     (key) => {
       const rest: Record<string, string | undefined> = { ...ok }

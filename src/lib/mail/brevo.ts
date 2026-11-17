@@ -66,7 +66,11 @@ export async function upsertContact(data: Record<string, string>, o: ContactOpti
     }),
     signal: AbortSignal.timeout(TIMEOUT_MS),
   })
-  if (!res.ok) throw new Error(`brevo contact request failed with status ${res.status}`)
+  if (!res.ok) {
+    // Brevo explains refusals (unknown attribute, invalid list...): keep that text for the operator's logs.
+    const detail = await res.text().catch(() => '')
+    throw new Error(`brevo contact request failed with status ${res.status}: ${detail.slice(0, 300)}`)
+  }
 }
 
 export async function sendMail(m: MailInput, o: MailOptions): Promise<void> {
