@@ -25,6 +25,10 @@
     "build:l-exposition": {
       "status": "done",
       "inputsHash": "41b845953f43fac127fa72921a061e160f8974de0734b74d927277f43dd0f4d0"
+    },
+    "build:galerie-photos": {
+      "status": "done",
+      "inputsHash": "2711a1f450a00e548a9d5e749264fd669d98e4fb455e64e1e78174be24f4182c"
     }
   },
   "modules": {},
