@@ -5,25 +5,25 @@ import { SplitText } from '@/components/motion/SplitText'
 const artworks = [
   {
     title: 'Vue de la passerelle Vaugirard 3',
-    details: 'Huile sur toile · 80 × 80 cm · [année]',
+    details: 'Huile sur toile · 80 × 80 cm',
     src: '/images/vue-de-la-passerelle-vaugirard-3.webp',
     alt: 'Vue de la passerelle Vaugirard 3, huile sur toile, Alain Pontecorvo',
   },
   {
     title: 'Arc-en-ciel',
-    details: 'Huile sur toile · 80 × 68 cm · [année]',
+    details: 'Huile sur toile · 80 × 68 cm',
     src: '/images/arc-en-ciel.webp',
     alt: 'Arc-en-ciel, huile sur toile, Alain Pontecorvo',
   },
   {
     title: 'Le convoi serein',
-    details: 'Huile sur toile · 80 × 80 cm · [année]',
+    details: 'Huile sur toile · 80 × 80 cm',
     src: '/images/le-convoi-serein.webp',
     alt: 'Le convoi serein, huile sur toile, Alain Pontecorvo',
   },
   {
     title: 'Rue Brown-Séquard',
-    details: 'Huile sur toile · 81 × 60 cm · [année]',
+    details: 'Huile sur toile · 81 × 60 cm',
     src: '/images/rue-brown-sequard.webp',
     alt: 'Rue Brown-Séquard, huile sur toile, Alain Pontecorvo',
   },
@@ -95,13 +95,10 @@ export default function GaleriePhotos() {
                 <dt className="text-ink-soft">Dimensions</dt>
                 <dd>130 × 195 cm</dd>
                 <dt className="text-ink-soft">Année</dt>
-                <dd>[Année]</dd>
+                <dd>2025</dd>
                 <dt className="text-ink-soft">Statut</dt>
                 <dd>Disponible à l&apos;acquisition</dd>
               </dl>
-              <p className="max-w-prose text-ink-soft">
-                [Courte notice sur l&apos;œuvre : sujet, place dans le parcours de l&apos;artiste, ce qui la rend centrale dans la rétrospective.]
-              </p>
               <div>
                 <a href="#contact" className="btn-perrotin">
                   Demander le dossier de l&apos;œuvre
@@ -137,7 +134,7 @@ export default function GaleriePhotos() {
                 </div>
                 <div>
                   <h3 className="font-serif-title text-[1.5625rem] italic">Burning Man</h3>
-                  <p className="text-sm text-ink-soft">Huile sur toile · 130 × 195 cm · [année]</p>
+                  <p className="text-sm text-ink-soft">Huile sur toile · 130 × 195 cm · 2025</p>
                 </div>
               </article>
             </Reveal>

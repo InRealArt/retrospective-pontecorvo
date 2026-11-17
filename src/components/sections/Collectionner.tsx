@@ -15,7 +15,7 @@ const steps = [
   {
     n: "03",
     title: "Acquérir",
-    text: "Certificat d'authenticité, conseils d'encadrement, livraison et installation : [à préciser selon les services de la galerie].",
+    text: "Certificat d'authenticité, conseils d'encadrement, livraison et installation.",
   },
 ];
 
