@@ -29,8 +29,6 @@ const artworks = [
   },
 ]
 
-const placeholders = [0]
-
 export default function GaleriePhotos() {
   return (
     <>
@@ -152,23 +150,6 @@ export default function GaleriePhotos() {
                   <div>
                     <h3 className="font-serif-title text-[1.5625rem] italic">{a.title}</h3>
                     <p className="text-sm text-ink-soft">{a.details}</p>
-                  </div>
-                </article>
-              </Reveal>
-            ))}
-            {placeholders.map((i) => (
-              <Reveal key={i} delay={0.08 * ((i + 1) % 3)}>
-                <article className="luxury-card flex h-full flex-col gap-4 p-4">
-                  <div
-                    role="img"
-                    aria-label="Emplacement image d'œuvre"
-                    className="flex aspect-[4/5] items-center justify-center bg-line-strong text-sm text-ink-soft"
-                  >
-                    [Image]
-                  </div>
-                  <div>
-                    <h3 className="font-serif-title text-[1.5625rem] italic">[Titre de l’œuvre]</h3>
-                    <p className="text-sm text-ink-soft">[Technique] · [dimensions] · [année]</p>
                   </div>
                 </article>
               </Reveal>
