@@ -37,6 +37,10 @@
     "build:regards": {
       "status": "done",
       "inputsHash": "6f23da32683c95e3a85dfb19faf283c06e90b772c25986098559ec982c09abf9"
+    },
+    "build:collectionner": {
+      "status": "done",
+      "inputsHash": "3941563cfc83de0f26f3217e2b584183be0861f243c1d0d2df7f510f44f98e17"
     }
   },
   "modules": {},
