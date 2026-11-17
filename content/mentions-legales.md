@@ -49,6 +49,7 @@ Destinataires : les équipes d'InRealArt et de la Galerie Leadouze, ainsi que le
 - Brevo (Sendinblue SAS) — envoi des e-mails (Paris, France).
 - Cloudflare, Inc. — protection anti-robot du formulaire (Turnstile) (États-Unis).
 - Vercel Inc. — hébergement et diffusion du site (États-Unis).
+- Google Maps (Google Ireland Limited) — plan d'accès à la galerie (Irlande / États-Unis).
 
 Certains de ces prestataires sont situés hors de l'Union européenne. Les transferts de données reposent sur les garanties prévues par le RGPD (décision d'adéquation ou clauses contractuelles types).
 
@@ -58,7 +59,7 @@ Vos droits : conformément au Règlement général sur la protection des donnée
 
 ## Cookies et services tiers
 
-Ce site n'utilise pas de cookies publicitaires ni d'outil de mesure d'audience. Le formulaire est protégé contre les envois automatisés par Cloudflare Turnstile ; ce service peut déposer des cookies ou traceurs techniques nécessaires à son fonctionnement.
+Ce site n'utilise pas de cookies publicitaires ni d'outil de mesure d'audience. Le formulaire est protégé contre les envois automatisés par Cloudflare Turnstile, et le plan d'accès est fourni par Google Maps ; ces services peuvent déposer des cookies ou traceurs techniques nécessaires à leur fonctionnement.
 
 ## Droit applicable
 

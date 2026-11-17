@@ -51,4 +51,10 @@ forms:
     mail: { to: "env:CONTACT_TO", replyToField: email }
     rateLimit: { perIpPerHour: 5 }
 
+
+# Origines que le site peut afficher dans un cadre (la carte Google Maps de la section Visite).
+security:
+  frameSrc:
+    - https://www.google.com
+
 modules: []

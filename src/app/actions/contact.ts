@@ -22,7 +22,14 @@ const schema = buildFormSchema(fields)
 const limiter = createRateLimiter({ max: 5, windowMs: 60 * 60 * 1000 })
 
 export async function submitContact(_previous: FormState, formData: FormData): Promise<FormState> {
-  const env = parseServerEnv(process.env)
+  let env: ReturnType<typeof parseServerEnv>
+  try {
+    env = parseServerEnv(process.env)
+  } catch (error) {
+    // A missing or malformed setting is ours to fix: log it for the operator and tell the visitor the send failed.
+    console.error('form configuration error', error)
+    return { status: 'error', error: 'mail' }
+  }
   const result = await handleForm({
     formData,
     headers: await headers(),

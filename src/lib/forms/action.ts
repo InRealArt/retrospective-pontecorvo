@@ -22,6 +22,8 @@ export async function handleForm(a: HandleFormArgs): Promise<FormResult> {
 
   const raw: Record<string, string> = {}
   for (const [key, value] of a.formData.entries()) {
+    // React adds hidden $ACTION_* fields to a Server Action form (progressive enhancement). They are not user input.
+    if (key.startsWith('$ACTION_')) continue
     if (typeof value !== 'string') return { ok: false, error: 'invalid' }
     raw[key] = value
   }

@@ -26,19 +26,19 @@ export default function Contact() {
         >
           <label className={labelClass}>
             Prénom
-            <input type="text" name="prenom" required maxLength={80} className={fieldClass} />
+            <input type="text" name="prenom" autoComplete="given-name" required maxLength={80} className={fieldClass} />
           </label>
           <label className={labelClass}>
             Nom
-            <input type="text" name="nom" required maxLength={80} className={fieldClass} />
+            <input type="text" name="nom" autoComplete="family-name" required maxLength={80} className={fieldClass} />
           </label>
           <label className={labelClass}>
             E-mail
-            <input type="email" name="email" required className={fieldClass} />
+            <input type="email" name="email" autoComplete="email" required className={fieldClass} />
           </label>
           <label className={labelClass}>
             Téléphone
-            <input type="tel" name="telephone" className={fieldClass} />
+            <input type="tel" name="telephone" autoComplete="tel" className={fieldClass} />
           </label>
           <label className={`${labelClass} sm:col-span-2`}>
             Votre demande
@@ -59,7 +59,7 @@ export default function Contact() {
             />
           </label>
           <label className="flex items-start gap-3 text-sm text-ink-soft sm:col-span-2">
-            <input type="checkbox" name="consentement" required className="mt-1 size-4 accent-accent" />
+            <input type="checkbox" name="consentement" required className="mt-0.5 size-5 shrink-0 accent-accent" />
             J&apos;accepte que mes données soient utilisées pour répondre à ma demande.
           </label>
           <p className="m-0 text-sm text-ink-soft sm:col-span-2">

@@ -46,12 +46,13 @@ export default function MentionsLegales() {
             <li>Brevo (Sendinblue SAS) — envoi des e-mails (Paris, France).</li>
             <li>Cloudflare, Inc. — protection anti-robot du formulaire (Turnstile) (États-Unis).</li>
             <li>Vercel Inc. — hébergement et diffusion du site (États-Unis).</li>
+            <li>Google Maps (Google Ireland Limited) — plan d&apos;accès à la galerie (Irlande / États-Unis).</li>
           </ul>
           <p className="mt-4 text-ink-soft">Certains de ces prestataires sont situés hors de l&apos;Union européenne. Les transferts de données reposent sur les garanties prévues par le RGPD (décision d&apos;adéquation ou clauses contractuelles types).</p>
           <p className="mt-4 text-ink-soft">Durée de conservation : vos données sont conservées pendant la durée nécessaire au traitement de votre demande, puis au maximum trois ans à compter de notre dernier contact, sauf demande de suppression de votre part.</p>
           <p className="mt-4 text-ink-soft">Vos droits : conformément au Règlement général sur la protection des données (RGPD) et à la loi Informatique et Libertés, vous disposez d&apos;un droit d&apos;accès, de rectification, d&apos;effacement, d&apos;opposition, de limitation et de portabilité de vos données, ainsi que du droit de retirer votre consentement à tout moment. Pour les exercer, écrivez à teaminrealart@gmail.com. Vous pouvez également introduire une réclamation auprès de la CNIL (www.cnil.fr).</p>
           <h2 className="font-display mt-12 text-3xl text-ink">Cookies et services tiers</h2>
-          <p className="mt-4 text-ink-soft">Ce site n&apos;utilise pas de cookies publicitaires ni d&apos;outil de mesure d&apos;audience. Le formulaire est protégé contre les envois automatisés par Cloudflare Turnstile ; ce service peut déposer des cookies ou traceurs techniques nécessaires à son fonctionnement.</p>
+          <p className="mt-4 text-ink-soft">Ce site n&apos;utilise pas de cookies publicitaires ni d&apos;outil de mesure d&apos;audience. Le formulaire est protégé contre les envois automatisés par Cloudflare Turnstile, et le plan d&apos;accès est fourni par Google Maps ; ces services peuvent déposer des cookies ou traceurs techniques nécessaires à leur fonctionnement.</p>
           <h2 className="font-display mt-12 text-3xl text-ink">Droit applicable</h2>
           <p className="mt-4 text-ink-soft">Les présentes mentions légales sont soumises au droit français. En cas de litige, et à défaut de résolution amiable, les tribunaux français sont seuls compétents.</p>
         </div>
