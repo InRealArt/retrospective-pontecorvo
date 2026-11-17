@@ -1,4 +1,5 @@
 import { Reveal } from '@/components/motion/Reveal'
+import { SplitText } from '@/components/motion/SplitText'
 
 const placeholders = [0, 1, 2, 3, 4]
 
@@ -82,7 +83,7 @@ export default function GaleriePhotos() {
           <div className="mb-12 flex flex-wrap items-end justify-between gap-6">
             <div>
               <p className="eyebrow mb-4">Parcours</p>
-              <h2 className="font-serif-title text-[1.9375rem] md:text-[2.4375rem]">Œuvres présentées</h2>
+              <SplitText as="h2" text="Œuvres présentées" className="font-serif-title text-[1.9375rem] md:text-[2.4375rem]" />
             </div>
             <a href="#contact" className="link-accent font-semibold">
               Recevoir la liste complète et les prix →

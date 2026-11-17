@@ -65,6 +65,10 @@
     "legal-mentions-legales": {
       "status": "done",
       "inputsHash": "b0ae0b82059dbab6fe38880c130fc9756c7bca307c11916b9863697796fe1777"
+    },
+    "animate": {
+      "status": "done",
+      "inputsHash": "6f613bd8c1536e5607417b625366425b2fc2843489d9b438e63c9d8927194071"
     }
   },
   "modules": {},
