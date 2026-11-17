@@ -53,6 +53,10 @@
     "build:faq": {
       "status": "done",
       "inputsHash": "82407d084516b08a6034eb90a83bbefcbfd6497d1f99c2a983903b59755ec29d"
+    },
+    "build:footer": {
+      "status": "done",
+      "inputsHash": "eb46928d9377299f07730bd7e0a8feafde69fe0c668bea69f6f7018517a0db16"
     }
   },
   "modules": {},
