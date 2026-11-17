@@ -10,6 +10,24 @@ html {
   scroll-margin-top: var(--header-offset, 5rem);
 }
 
+/* Tailwind v4 leaves buttons with the default arrow: show the hand on everything clickable. */
+button:not(:disabled),
+[role="button"]:not([aria-disabled="true"]),
+a[href],
+summary,
+select,
+input[type="checkbox"],
+input[type="submit"]:not(:disabled),
+.btn-perrotin,
+.btn-perrotin-outline {
+  cursor: pointer;
+}
+
+button:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
