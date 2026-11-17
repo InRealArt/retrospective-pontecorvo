@@ -5,6 +5,7 @@ project:
   locale: fr
   locales: [fr]
   domain: retrospective-pontecorvo.galerie-leadouze.inrealart.com
+  packageManager: pnpm
 
 # Page de départ : le site statique actuel, restylé avec la direction artistique ci-dessous.
 source:
