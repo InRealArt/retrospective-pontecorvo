@@ -17,7 +17,7 @@ const LEVELS: Record<MotionLevel, { y: number; durationFactor: number; stagger: 
 const round = (n: number) => Math.round(n * 1000) / 1000
 
 /** Reveal parameters for a motion level; only transform and opacity are ever animated with them. */
-export function motionConfig(level: MotionLevel, durationBase: number, ease = 'power3.out'): MotionConfig {
+export function motionConfig(level: MotionLevel, durationBase: number, ease = 'expo.out'): MotionConfig {
   const l = LEVELS[level]
   return { y: l.y, duration: round(durationBase * l.durationFactor), stagger: l.stagger, ease }
 }

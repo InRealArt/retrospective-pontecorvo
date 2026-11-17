@@ -1,0 +1,17 @@
+/* Base rules shared by every site. Colors and fonts stay in tokens.css. */
+
+/* Menu links that point to an in-page anchor glide to their section. */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Land below a fixed header instead of under it. Set --header-offset to the header height. */
+[id] {
+  scroll-margin-top: var(--header-offset, 5rem);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
