@@ -2,7 +2,7 @@ import { Reveal } from "@/components/motion/Reveal";
 import { SplitText } from "@/components/motion/SplitText";
 
 const figures = [
-  { value: "[XX]", label: "œuvres exposées" },
+  { value: "19", label: "œuvres exposées" },
   { value: "65+", label: "années de peinture" },
   { value: "2", label: "niveaux d'exposition" },
 ];
@@ -21,7 +21,7 @@ export default function LExposition() {
         </div>
         <div className="flex min-w-0 flex-col gap-6 text-base text-ink lg:col-span-7">
           <Reveal as="p" className="max-w-prose">
-            Né à Paris en 1936, Alain Pontecorvo peint depuis plus de soixante ans. La rétrospective rassemble [nombre] œuvres, des premières toiles aux travaux les plus récents : coins de rue et paysages urbains, intérieurs, natures mortes et portraits, saisis sur le vif puis recomposés à l&apos;atelier.
+            Né à Paris en 1936, Alain Pontecorvo peint depuis plus de soixante ans. La rétrospective rassemble 19 œuvres, des premières toiles aux travaux les plus récents : coins de rue et paysages urbains, intérieurs, natures mortes et portraits, saisis sur le vif puis recomposés à l&apos;atelier.
           </Reveal>
           <Reveal as="p" className="max-w-prose" delay={0.06}>
             Une peinture d&apos;observation, d&apos;une grande précision, proche de l&apos;hyperréalisme, où la lumière et l&apos;ombre font le sujet autant que les lieux et les visages. Présentée sur les deux niveaux de la galerie, salle d&apos;exposition et mezzanine, l&apos;exposition permet d&apos;approcher les grands formats comme les œuvres plus intimes.
