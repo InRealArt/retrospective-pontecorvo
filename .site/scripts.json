@@ -1,0 +1,3 @@
+[
+  "\n// Accordéon FAQ : une seule question ouverte à la fois\ndocument.querySelectorAll('.faq-item').forEach(function(d){d.addEventListener('toggle',function(){if(d.open)document.querySelectorAll('.faq-item').forEach(function(o){if(o!==d)o.open=false;});});});\n"
+]

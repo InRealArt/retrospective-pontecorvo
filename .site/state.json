@@ -1,0 +1,12 @@
+{
+  "briefHash": "f14e1d8b8e474addfbb63f1e4d6514992a87f7ff3a6a8e40dbf6d2dcc428d8b3",
+  "pluginVersion": "0.1.0",
+  "steps": {
+    "scaffold": {
+      "status": "done",
+      "inputsHash": "f14e1d8b8e474addfbb63f1e4d6514992a87f7ff3a6a8e40dbf6d2dcc428d8b3"
+    }
+  },
+  "modules": {},
+  "qa": {}
+}

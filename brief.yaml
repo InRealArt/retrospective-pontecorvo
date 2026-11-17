@@ -1,0 +1,53 @@
+version: 1
+
+project:
+  name: retrospective-pontecorvo
+  locale: fr
+  locales: [fr]
+  domain: retrospective-pontecorvo.galerie-leadouze.inrealart.com
+
+# Page de départ : le site statique actuel, restylé avec la direction artistique ci-dessous.
+source:
+  template: ./index.html
+  mode: restyle
+
+# Direction artistique : le projet de référence de la galerie (palette, polices, composants, easing).
+# Autres sources possibles : { url: https://... } ou { text: "description libre" }.
+da:
+  source:
+    repo: /home/gilles/DEV/IN_REAL_ART/gallery-leadouze-events
+  motion:
+    level: subtle
+
+pages:
+  - route: /
+  - route: /mentions-legales
+    kind: legal
+    content: content/mentions-legales.md
+
+forms:
+  - id: contact
+    fields:
+      - { name: prenom, type: text, required: true, max: 80, label: Prénom }
+      - { name: nom, type: text, required: true, max: 80, label: Nom }
+      - { name: email, type: email, required: true, label: E-mail }
+      - { name: telephone, type: tel, label: Téléphone }
+      - name: demande
+        type: select
+        required: true
+        label: Votre demande
+        options:
+          - Organiser une visite privée
+          - Recevoir le catalogue de l'exposition
+          - Information sur une œuvre
+          - Autre demande
+      - { name: message, type: textarea, max: 2000, label: Message (facultatif) }
+      - name: consentement
+        type: consent
+        required: true
+        label: J'accepte que mes données soient utilisées pour répondre à ma demande.
+    turnstile: { action: contact }
+    mail: { to: "env:CONTACT_TO", replyToField: email }
+    rateLimit: { perIpPerHour: 5 }
+
+modules: []

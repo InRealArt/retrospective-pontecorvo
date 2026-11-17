@@ -1,0 +1,238 @@
+[
+  {
+    "name": "header",
+    "tag": "header",
+    "text": [
+      "Galerie Leadouze",
+      "×",
+      "InRealArt",
+      "L'exposition",
+      "Œuvres",
+      "L'artiste",
+      "Visite",
+      "FAQ",
+      "Préparer ma visite"
+    ],
+    "hasForm": false
+  },
+  {
+    "name": "hero",
+    "tag": "section",
+    "text": [
+      "Exposition · Rétrospective",
+      "Alain",
+      "Pontecorvo",
+      "Une rétrospective à la Galerie Leadouze",
+      "Un parcours à travers l'œuvre peinte d'Alain Pontecorvo, réuni dans les espaces de la galerie, avenue Matignon. Toiles majeures, séries emblématiques et pièces rarement montrées : une occasion de voir l'ensemble d'un travail, et d'en acquérir une part.",
+      "Dates",
+      "[Du JJ mois au JJ mois 2026]",
+      "Lieu",
+      "16 avenue Matignon, Paris 8e",
+      "Horaires",
+      "Lun. au sam., 10 h à 18 h",
+      "Prendre rendez-vous",
+      "Recevoir le catalogue",
+      "[Image : Burning Man, huile sur toile]",
+      "Burning Man",
+      ", huile sur toile, 130 × 195 cm"
+    ],
+    "hasForm": false
+  },
+  {
+    "name": "l-exposition",
+    "tag": "section",
+    "text": [
+      "L'exposition",
+      "Retracer un parcours de peintre",
+      "Né à Paris en 1936, Alain Pontecorvo peint depuis plus de soixante ans. La rétrospective rassemble [nombre] œuvres, des premières toiles aux travaux les plus récents : coins de rue et paysages urbains, intérieurs, natures mortes et portraits, saisis sur le vif puis recomposés à l'atelier.",
+      "Une peinture d'observation, d'une grande précision, proche de l'hyperréalisme, où la lumière et l'ombre font le sujet autant que les lieux et les visages. Présentée sur les deux niveaux de la galerie, salle d'exposition et mezzanine, l'exposition permet d'approcher les grands formats comme les œuvres plus intimes.",
+      "[XX]",
+      "œuvres exposées",
+      "65+",
+      "années de peinture",
+      "2",
+      "niveaux d'exposition"
+    ],
+    "hasForm": false
+  },
+  {
+    "name": "galerie-photos",
+    "tag": "section",
+    "text": [
+      "[Image : salle d'exposition]",
+      "[Image : mezzanine]",
+      "[Image : vue d'accrochage]",
+      "[Image : Burning Man]",
+      "Œuvre phare",
+      "Burning Man",
+      "Artiste",
+      "Alain Pontecorvo",
+      "Technique",
+      "Huile sur toile",
+      "Dimensions",
+      "130 × 195 cm",
+      "Année",
+      "[Année]",
+      "Statut",
+      "Disponible à l'acquisition",
+      "[Courte notice sur l'œuvre : sujet, place dans le parcours de l'artiste, ce qui la rend centrale dans la rétrospective.]",
+      "Demander le dossier de l'œuvre",
+      "Parcours",
+      "Œuvres présentées",
+      "Recevoir la liste complète et les prix →",
+      "[Image]",
+      "Burning Man",
+      "Huile sur toile · 130 × 195 cm · [année]",
+      "[Image]",
+      "[Titre de l’œuvre]",
+      "[Technique] · [dimensions] · [année]",
+      "[Image]",
+      "[Titre de l’œuvre]",
+      "[Technique] · [dimensions] · [année]",
+      "[Image]",
+      "[Titre de l’œuvre]",
+      "[Technique] · [dimensions] · [année]",
+      "[Image]",
+      "[Titre de l’œuvre]",
+      "[Technique] · [dimensions] · [année]",
+      "[Image]",
+      "[Titre de l’œuvre]",
+      "[Technique] · [dimensions] · [année]"
+    ],
+    "hasForm": false
+  },
+  {
+    "name": "l-artiste",
+    "tag": "section",
+    "text": [
+      "L'artiste",
+      "Alain Pontecorvo",
+      "Formé aux Arts décoratifs de Paris puis aux cours du soir de l'École Estienne, où il se passionne pour la typographie, Alain Pontecorvo mène d'abord une carrière de directeur artistique dans la publicité, de Havas à Roux-Séguéla, où il travaille aux côtés de Jacques Séguéla. Il y crée même son propre caractère typographique, le « Pontecorvo ».",
+      "Revenu entièrement à la peinture et au dessin, il travaille à partir de croquis et de photographies prises sur le vif, qu'il recompose à l'atelier, à l'huile, à la gouache, au pastel ou au fusain. Il revendique l'héritage de Velázquez, Rembrandt, Manet, Klimt, Schiele et Lucian Freud. Ses œuvres figurent dans des collections publiques et privées en Europe, aux États-Unis, au Moyen-Orient et en Asie.",
+      "1936",
+      "Naissance à Paris.",
+      "1960",
+      "Vend sa première toile, alors étudiant aux Arts décoratifs de Paris.",
+      "Publicité",
+      "Directeur artistique chez Havas, puis dans une douzaine d’agences, dont Roux-Séguéla, pendant près de quinze ans.",
+      "Peinture",
+      "Se consacre à la peinture et au dessin ; enseigne les arts graphiques et plastiques à l’Atelier de la Passerelle.",
+      "Expositions",
+      "Galerie de l’Europe (Paris), Musée de l’Imprimerie (Lyon), musée Olivier Brice (Montpellier).",
+      "2008",
+      "Exposition au National Arts Club, New York.",
+      "2026",
+      "Rétrospective à la Galerie Leadouze, Paris 8e."
+    ],
+    "hasForm": false
+  },
+  {
+    "name": "regards",
+    "tag": "section",
+    "text": [
+      "Regards sur l'œuvre",
+      "« [Citation de Jacques Séguéla sur l'œuvre de Pontecorvo] »",
+      "Jacques Séguéla",
+      "Publicitaire, a travaillé plus de quatorze ans avec l'artiste",
+      "« [Mot d'Alexandre Leadouze sur la rétrospective] »",
+      "Alexandre Leadouze",
+      "Fondateur de la galerie, aux côtés des collectionneurs depuis quarante ans"
+    ],
+    "hasForm": false
+  },
+  {
+    "name": "collectionner",
+    "tag": "section",
+    "text": [
+      "Collectionner Pontecorvo",
+      "Acquérir une œuvre de la rétrospective",
+      "Les œuvres exposées sont disponibles à l'acquisition. L'équipe de la galerie, dirigée par Thibault Proust, vous accompagne de la première visite à l'accrochage chez vous.",
+      "01",
+      "Visiter",
+      "Découvrez les œuvres librement ou lors d'une visite privée avec un membre de la galerie.",
+      "02",
+      "S'informer",
+      "Recevez le catalogue de l'exposition, réalisé avec InRealArt, et le dossier des œuvres qui vous intéressent.",
+      "03",
+      "Acquérir",
+      "Certificat d'authenticité, conseils d'encadrement, livraison et installation : [à préciser selon les services de la galerie]."
+    ],
+    "hasForm": false
+  },
+  {
+    "name": "visite",
+    "tag": "section",
+    "text": [
+      "Informations pratiques",
+      "Visiter l'exposition",
+      "Adresse",
+      "Galerie Leadouze",
+      "16 avenue Matignon, 75008 Paris",
+      "Dates",
+      "[Du JJ mois au JJ mois 2026]",
+      "Horaires",
+      "Du lundi au samedi, de 10 h à 18 h",
+      "Fermé le dimanche",
+      "Accès",
+      "Métro Franklin D. Roosevelt (lignes 1 et 9) ou Miromesnil (lignes 9 et 13)",
+      "Contact",
+      "+33 (0)6 45 97 65 58",
+      "galerieleadouze@gmail.com",
+      "[Carte : 16 avenue Matignon]"
+    ],
+    "hasForm": false
+  },
+  {
+    "name": "contact",
+    "tag": "section",
+    "text": [
+      "Contact",
+      "Visite privée, catalogue ou renseignement",
+      "Laissez-nous vos coordonnées : la galerie revient vers vous pour organiser votre visite ou vous adresser le catalogue de la rétrospective.",
+      "Prénom",
+      "Nom",
+      "E-mail",
+      "Téléphone",
+      "Votre demande",
+      "Organiser une visite privée",
+      "Recevoir le catalogue de l'exposition",
+      "Information sur une œuvre",
+      "Autre demande",
+      "Message (facultatif)",
+      "Vos données sont utilisées uniquement pour répondre à votre demande.",
+      "Mentions légales",
+      "Envoyer ma demande"
+    ],
+    "hasForm": true
+  },
+  {
+    "name": "faq",
+    "tag": "section",
+    "text": [
+      "FAQ",
+      "Questions fréquentes",
+      "En quoi consiste la rétrospective consacrée à Alain Pontecorvo ?",
+      "[Présentation de l’exposition : nombre d’œuvres, périodes couvertes, parcours de visite.]",
+      "Quels sont les horaires d’ouverture ?",
+      "L’exposition est visible aux horaires de la galerie : du lundi au samedi, de 10 h à 18 h. La galerie est fermée le dimanche.",
+      "Où se situe la Galerie Leadouze ?",
+      "Au 16 avenue Matignon, dans le 8e arrondissement de Paris, à deux pas des Champs-Élysées. Métro Franklin D. Roosevelt (lignes 1 et 9) ou Miromesnil (lignes 9 et 13).",
+      "Les œuvres exposées sont-elles à vendre ?",
+      "Oui, les œuvres de la rétrospective sont disponibles à l’acquisition. Contactez la galerie pour recevoir la liste des œuvres et leurs conditions.",
+      "Comment recevoir le catalogue de l’exposition ?",
+      "Utilisez le formulaire de contact en choisissant « Recevoir le catalogue de l’exposition » : la galerie vous l’adressera.",
+      "Une entreprise peut-elle bénéficier d’un avantage fiscal en acquérant une œuvre ?",
+      "[Réponse à valider avec la galerie ou un conseil fiscal : régime de déduction pour l’achat d’œuvres originales d’artistes vivants par les entreprises, et ses conditions.]"
+    ],
+    "hasForm": false
+  },
+  {
+    "name": "footer",
+    "tag": "footer",
+    "text": [
+      "© 2026 InRealArt × Galerie Leadouze",
+      "Mentions légales"
+    ],
+    "hasForm": false
+  }
+]

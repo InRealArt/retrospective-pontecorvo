@@ -1,0 +1,30 @@
+{
+  "source": {
+    "type": "repo",
+    "ref": "/home/gilles/DEV/IN_REAL_ART/gallery-leadouze-events"
+  },
+  "colors": {
+    "gallery-50": "#faf9f8",
+    "gallery-100": "#f5f4f0",
+    "gallery-200": "#e6e4df",
+    "gallery-800": "#1c1a17",
+    "gallery-900": "#0f0e0d",
+    "accent-gold": "#b8860b",
+    "accent-gold-light": "#d4af37"
+  },
+  "fonts": {
+    "display": "Playfair Display",
+    "body": "Plus Jakarta Sans",
+    "extra": []
+  },
+  "easings": [
+    "cubic-bezier(0.16, 1, 0.3, 1)"
+  ],
+  "components": {
+    "font-serif-title": "font-family: var(--font-serif-title);",
+    "luxury-card": "background: #ffffff; border: 1px solid rgba(15, 14, 13, 0.08); transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);",
+    "btn-perrotin": "background-color: #0f0e0d; color: #ffffff; transition: all 0.3s ease;",
+    "btn-perrotin-outline": "background-color: transparent; color: #0f0e0d; border: 1px solid #0f0e0d; transition: all 0.3s ease;"
+  },
+  "warnings": []
+}
