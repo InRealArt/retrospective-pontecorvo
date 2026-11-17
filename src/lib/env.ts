@@ -10,6 +10,8 @@ const serverEnvSchema = z.object({
   BREVO_SENDER_EMAIL: z.email(),
   BREVO_SENDER_NAME: z.string().min(1).default('Site'),
   CONTACT_TO: z.email(),
+  /** Brevo list that receives each visitor as a contact; unset means no contact is created. */
+  BREVO_CONTACTS_LIST_ID: z.coerce.number().int().positive().optional(),
   NEXT_PUBLIC_TURNSTILE_SITE_KEY: z.string().optional(),
   /** Hostname Turnstile must report; set to "localhost" in development. */
   SITE_HOSTNAME: z.string().min(1).optional(),

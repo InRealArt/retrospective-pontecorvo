@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { escapeHtml, sendMail } from '../lib/mail/brevo'
+import { escapeHtml, sendMail, upsertContact, contactAttributes } from '../lib/mail/brevo'
 
 const opts = (fetchImpl: typeof fetch) => ({
   apiKey: 'xkeysib-test',
@@ -64,6 +64,66 @@ describe('sendMail', () => {
     const err = await sendMail({ to: 'c@example.com', subject: 'Hi', html: 'x' }, opts(fetchImpl)).catch((e) => e)
     expect(err).toBeInstanceOf(Error)
     expect(String(err.message)).toContain('401')
+    expect(String(err.message)).not.toContain('xkeysib-test')
+  })
+})
+
+const submitted = {
+  prenom: 'Ada',
+  nom: 'Lovelace',
+  email: 'ada@example.com',
+  telephone: '06 01 02 03 04',
+  demande: 'Organiser une visite privée',
+  message: 'Bonjour',
+  consentement: 'on',
+}
+
+describe('contactAttributes', () => {
+  it('maps the form fields to Brevo attributes and the consent to a boolean', () => {
+    expect(contactAttributes(submitted)).toEqual({
+      FIRSTNAME: 'Ada',
+      LASTNAME: 'Lovelace',
+      TELEPHONE: '06 01 02 03 04',
+      DEMANDE: 'Organiser une visite privée',
+      MESSAGE: 'Bonjour',
+      CONSENTEMENT: true,
+    })
+  })
+
+  it('omits empty optional fields', () => {
+    const attrs = contactAttributes({ ...submitted, telephone: '', message: '' })
+    expect(attrs).not.toHaveProperty('TELEPHONE')
+    expect(attrs).not.toHaveProperty('MESSAGE')
+  })
+})
+
+describe('upsertContact', () => {
+  it('posts to /contacts with the list, attributes and updateEnabled', async () => {
+    const { calls, fetchImpl } = okFetch()
+    await upsertContact(submitted, { apiKey: 'xkeysib-test', listId: 84, fetchImpl })
+    expect(calls[0].url).toBe('https://api.brevo.com/v3/contacts')
+    expect(calls[0].init.method).toBe('POST')
+    expect((calls[0].init.headers as Record<string, string>)['api-key']).toBe('xkeysib-test')
+    expect(JSON.parse(calls[0].init.body as string)).toEqual({
+      email: 'ada@example.com',
+      listIds: [84],
+      updateEnabled: true,
+      attributes: contactAttributes(submitted),
+    })
+  })
+
+  it('rejects a malformed or multi-line email without calling Brevo', async () => {
+    const { calls, fetchImpl } = okFetch()
+    await expect(
+      upsertContact({ ...submitted, email: 'a@b.co\r\nX: y' }, { apiKey: 'k', listId: 84, fetchImpl }),
+    ).rejects.toThrow()
+    expect(calls).toHaveLength(0)
+  })
+
+  it('throws on a non-2xx response without leaking the api key', async () => {
+    const fetchImpl = (async () => new Response('no', { status: 403 })) as unknown as typeof fetch
+    const err = await upsertContact(submitted, { apiKey: 'xkeysib-test', listId: 84, fetchImpl }).catch((e) => e)
+    expect(String(err.message)).toContain('403')
     expect(String(err.message)).not.toContain('xkeysib-test')
   })
 })

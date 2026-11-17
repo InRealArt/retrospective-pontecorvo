@@ -6,6 +6,7 @@ import { handleForm } from '@/lib/forms/action'
 import { makeSender } from '@/lib/forms/mail'
 import { buildFormSchema, type FieldDef } from '@/lib/forms/schema'
 import type { FormState } from '@/lib/forms/state'
+import { upsertContact } from '@/lib/mail/brevo'
 import { createRateLimiter } from '@/lib/rate-limit'
 
 const fields: FieldDef[] = [
@@ -30,6 +31,16 @@ export async function submitContact(_previous: FormState, formData: FormData): P
     console.error('form configuration error', error)
     return { status: 'error', error: 'mail' }
   }
+  const sendNotification = makeSender({
+    apiKey: env.BREVO_API_KEY,
+    sender: { email: env.BREVO_SENDER_EMAIL, name: env.BREVO_SENDER_NAME },
+    to: env.CONTACT_TO,
+    subject: "Nouvelle demande depuis le site",
+    replyToField: "email",
+    labels: {"prenom":"Prénom","nom":"Nom","email":"E-mail","telephone":"Téléphone","demande":"Votre demande","message":"Message (facultatif)","consentement":"J'accepte que mes données soient utilisées pour répondre à ma demande."},
+    checkboxes: ["consentement"],
+  })
+  const listId = env.BREVO_CONTACTS_LIST_ID
   const result = await handleForm({
     formData,
     headers: await headers(),
@@ -40,15 +51,16 @@ export async function submitContact(_previous: FormState, formData: FormData): P
       secret: env.TURNSTILE_SECRET_KEY,
     },
     limiter,
-    send: makeSender({
-      apiKey: env.BREVO_API_KEY,
-      sender: { email: env.BREVO_SENDER_EMAIL, name: env.BREVO_SENDER_NAME },
-      to: env.CONTACT_TO,
-      subject: "Nouvelle demande depuis le site",
-      replyToField: "email",
-      labels: {"prenom":"Prénom","nom":"Nom","email":"E-mail","telephone":"Téléphone","demande":"Votre demande","message":"Message (facultatif)","consentement":"J'accepte que mes données soient utilisées pour répondre à ma demande."},
-      checkboxes: ["consentement"],
-    }),
+    send: async (data) => {
+      await sendNotification(data)
+      if (listId === undefined) return
+      // The notification mail is the request itself: a failed contact sync must not make the visitor resend.
+      try {
+        await upsertContact(data, { apiKey: env.BREVO_API_KEY, listId })
+      } catch (error) {
+        console.error('brevo contact sync failed', error)
+      }
+    },
   })
   return result.ok ? { status: 'success' } : { status: 'error', error: result.error }
 }
