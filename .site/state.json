@@ -57,6 +57,10 @@
     "build:footer": {
       "status": "done",
       "inputsHash": "eb46928d9377299f07730bd7e0a8feafde69fe0c668bea69f6f7018517a0db16"
+    },
+    "page": {
+      "status": "done",
+      "inputsHash": "6398500f0dc97df79d294b7245284274c539835209deacb67574b21b0a09a3ef"
     }
   },
   "modules": {},
