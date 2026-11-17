@@ -1,7 +1,29 @@
+import Image from 'next/image'
 import { Reveal } from '@/components/motion/Reveal'
 import { SplitText } from '@/components/motion/SplitText'
 
-const placeholders = [0, 1, 2, 3, 4]
+const artworks = [
+  {
+    title: 'Vue de la passerelle Vaugirard 3',
+    details: 'Huile sur toile · 80 × 80 cm · [année]',
+    src: '/images/vue-de-la-passerelle-vaugirard-3.webp',
+    alt: 'Vue de la passerelle Vaugirard 3, huile sur toile, Alain Pontecorvo',
+  },
+  {
+    title: 'Arc-en-ciel',
+    details: 'Huile sur toile · 80 × 68 cm · [année]',
+    src: '/images/arc-en-ciel.webp',
+    alt: 'Arc-en-ciel, huile sur toile, Alain Pontecorvo',
+  },
+  {
+    title: 'Le convoi serein',
+    details: 'Huile sur toile · 80 × 80 cm · [année]',
+    src: '/images/le-convoi-serein.webp',
+    alt: 'Le convoi serein, huile sur toile, Alain Pontecorvo',
+  },
+]
+
+const placeholders = [0, 1]
 
 export default function GaleriePhotos() {
   return (
@@ -9,21 +31,25 @@ export default function GaleriePhotos() {
       <section aria-label="Vues de l'exposition" className="bg-paper pb-24">
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 px-6 md:grid-cols-12 md:px-12">
           <Reveal className="md:col-span-7 md:row-span-2">
-            <div
-              role="img"
-              aria-label="Emplacement image : espace d'exposition de la Galerie Leadouze"
-              className="flex h-full min-h-64 items-center justify-center bg-line-strong p-4 text-center text-sm text-ink-soft md:aspect-auto"
-            >
-              [Image : salle d&apos;exposition]
+            <div className="relative aspect-[5/3] h-full min-h-64 w-full bg-line-strong">
+              <Image
+                src="/images/galerie/gallerie_lea12_1.webp"
+                alt="Salle d'exposition de la Galerie Leadouze"
+                fill
+                sizes="(min-width: 768px) 58vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </Reveal>
           <Reveal delay={0.08} className="md:col-span-5">
-            <div
-              role="img"
-              aria-label="Emplacement image : mezzanine de la Galerie Leadouze"
-              className="flex aspect-[4/3] items-center justify-center bg-line-strong p-4 text-center text-sm text-ink-soft"
-            >
-              [Image : mezzanine]
+            <div className="relative aspect-[4/3] w-full bg-line-strong">
+              <Image
+                src="/images/galerie/gallerie_lea12_2.webp"
+                alt="Mezzanine de la Galerie Leadouze"
+                fill
+                sizes="(min-width: 768px) 42vw, 100vw"
+                className="object-cover"
+              />
             </div>
           </Reveal>
           <Reveal delay={0.16} className="md:col-span-5">
@@ -42,12 +68,14 @@ export default function GaleriePhotos() {
         <div className="mx-auto max-w-7xl px-6 md:px-12">
           <div className="luxury-card grid grid-cols-1 gap-8 p-6 md:grid-cols-12 md:gap-12 md:p-12">
             <Reveal className="md:col-span-7">
-              <div
-                role="img"
-                aria-label="Emplacement image : Burning Man, détail"
-                className="flex aspect-[195/130] items-center justify-center bg-line-strong text-sm text-ink-soft"
-              >
-                [Image : Burning Man]
+              <div className="relative aspect-[195/130] w-full bg-line-strong">
+                <Image
+                  src="/images/artworks/featured/pontecorvo_artwork.webp"
+                  alt="Burning Man, huile sur toile, 130 × 195 cm, Alain Pontecorvo"
+                  fill
+                  sizes="(min-width: 768px) 58vw, 100vw"
+                  className="object-cover"
+                />
               </div>
             </Reveal>
             <Reveal delay={0.08} className="flex flex-col gap-4 md:col-span-5">
@@ -92,12 +120,14 @@ export default function GaleriePhotos() {
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             <Reveal className="md:col-span-2">
               <article className="luxury-card flex h-full flex-col gap-4 p-4">
-                <div
-                  role="img"
-                  aria-label="Emplacement image d'œuvre"
-                  className="flex aspect-[4/3] items-center justify-center bg-line-strong text-sm text-ink-soft"
-                >
-                  [Image]
+                <div className="relative aspect-[4/3] w-full bg-line-strong">
+                  <Image
+                    src="/images/artworks/featured/pontecorvo_artwork.webp"
+                    alt="Burning Man, huile sur toile, 130 × 195 cm, Alain Pontecorvo"
+                    fill
+                    sizes="(min-width: 768px) 66vw, 100vw"
+                    className="object-cover"
+                  />
                 </div>
                 <div>
                   <h3 className="font-serif-title text-[1.5625rem] italic">Burning Man</h3>
@@ -105,6 +135,19 @@ export default function GaleriePhotos() {
                 </div>
               </article>
             </Reveal>
+            {artworks.map((a, i) => (
+              <Reveal key={a.title} delay={0.08 * ((i + 1) % 3)}>
+                <article className="luxury-card flex h-full flex-col gap-4 p-4">
+                  <div className="relative aspect-[4/5] w-full bg-line-strong">
+                    <Image src={a.src} alt={a.alt} fill sizes="(min-width: 768px) 33vw, 100vw" className="object-contain" />
+                  </div>
+                  <div>
+                    <h3 className="font-serif-title text-[1.5625rem] italic">{a.title}</h3>
+                    <p className="text-sm text-ink-soft">{a.details}</p>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
             {placeholders.map((i) => (
               <Reveal key={i} delay={0.08 * ((i + 1) % 3)}>
                 <article className="luxury-card flex h-full flex-col gap-4 p-4">

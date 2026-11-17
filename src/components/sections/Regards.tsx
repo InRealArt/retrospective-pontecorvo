@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
 
 const quotes = [
@@ -5,13 +6,15 @@ const quotes = [
     quote: "« [Citation de Jacques Séguéla sur l'œuvre de Pontecorvo] »",
     name: "Jacques Séguéla",
     role: "Publicitaire, a travaillé plus de quatorze ans avec l'artiste",
-    alt: "Emplacement portrait : Jacques Séguéla",
+    alt: "Portrait de Jacques Séguéla",
+    photo: "/images/intervenants/seguela.webp",
   },
   {
     quote: "« [Mot d'Alexandre Leadouze sur la rétrospective] »",
     name: "Alexandre Leadouze",
     role: "Fondateur de la galerie, aux côtés des collectionneurs depuis quarante ans",
-    alt: "Emplacement portrait : Alexandre Leadouze",
+    alt: "Portrait d'Alexandre Leadouze",
+    photo: "/images/intervenants/Alexandre.webp",
   },
 ];
 
@@ -36,7 +39,9 @@ export default function Regards() {
                 {q.quote}
               </blockquote>
               <figcaption className="flex items-center gap-4 border-t border-line-on-dark pt-6">
-                <div role="img" aria-label={q.alt} className="size-14 flex-none bg-paper-soft" />
+                <div className="relative size-14 flex-none overflow-hidden bg-paper-soft">
+                  <Image src={q.photo} alt={q.alt} fill sizes="56px" className="object-cover object-top" />
+                </div>
                 <div>
                   <div className="font-semibold">{q.name}</div>
                   <div className="text-sm text-paper-soft">{q.role}</div>

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="bg-paper text-ink">
@@ -39,12 +41,15 @@ export default function Hero() {
           </div>
         </div>
         <figure className="m-0 flex min-w-0 flex-col gap-3 lg:col-span-5">
-          <div
-            role="img"
-            aria-label="Emplacement image : Alain Pontecorvo, Burning Man, huile sur toile"
-            className="flex aspect-[195/130] w-full items-center justify-center border border-line bg-paper-alt p-6 text-center text-sm text-ink-soft"
-          >
-            [Image : Burning Man, huile sur toile]
+          <div className="relative aspect-[195/130] w-full border border-line bg-paper-alt">
+            <Image
+              src="/images/artworks/featured/pontecorvo_artwork.webp"
+              alt="Alain Pontecorvo, Burning Man, huile sur toile"
+              fill
+              priority
+              sizes="(min-width: 1024px) 40vw, 100vw"
+              className="object-cover"
+            />
           </div>
           <figcaption className="text-sm text-ink-soft">
             <em className="font-display text-base">Burning Man</em>, huile sur toile, 130 × 195 cm
