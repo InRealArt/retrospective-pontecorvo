@@ -15,7 +15,7 @@ export default function Contact() {
             Visite privée, catalogue ou renseignement
           </h2>
           <p className="m-0 text-lg text-ink-soft">
-            Laissez-nous vos coordonnées : la galerie revient vers vous pour organiser votre visite ou vous adresser le catalogue de la rétrospective.
+            Laissez-nous vos coordonnées : InRealArt revient vers vous pour organiser votre visite ou vous adresser le catalogue de la rétrospective.
           </p>
         </div>
         <SecureForm
