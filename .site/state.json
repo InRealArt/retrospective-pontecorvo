@@ -17,6 +17,10 @@
     "build:header": {
       "status": "done",
       "inputsHash": "12f94f53fdf5d4272a651189b02db5a87b61c0a2843dd7ce36bff3e4d2446031"
+    },
+    "build:hero": {
+      "status": "done",
+      "inputsHash": "cdf7208b19bcdf80117acd4c4840974829003179678765cc41444604e85930ed"
     }
   },
   "modules": {},
