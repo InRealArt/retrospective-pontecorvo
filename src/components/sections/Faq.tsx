@@ -13,15 +13,15 @@ const items = [
   },
   {
     q: "Les œuvres exposées sont-elles à vendre ?",
-    a: "Oui, les œuvres de la rétrospective sont disponibles à l’acquisition. Contactez la galerie pour recevoir la liste des œuvres et leurs conditions.",
+    a: "Oui, les œuvres de la rétrospective sont disponibles à l’acquisition. Contactez InRealArt pour recevoir la liste des œuvres et leurs conditions.",
   },
   {
     q: "Comment recevoir le catalogue de l’exposition ?",
-    a: "Utilisez le formulaire de contact en choisissant « Recevoir le catalogue de l’exposition » : la galerie vous l’adressera.",
+    a: "Utilisez le formulaire de contact en choisissant « Recevoir le catalogue de l’exposition » : InRealArt vous l’adressera.",
   },
   {
-    q: "Une entreprise peut-elle bénéficier d’un avantage fiscal en acquérant une œuvre ?",
-    a: "[Réponse à valider avec la galerie ou un conseil fiscal : régime de déduction pour l’achat d’œuvres originales d’artistes vivants par les entreprises, et ses conditions.]",
+    q: "De quelle façon les entreprises peuvent-elles bénéficier de l’art avec InRealArt ?",
+    a: "Une entreprise peut équiper ses locaux d’œuvres originales, par l’achat ou la location. InRealArt l’accompagne dans la sélection des œuvres et leur accrochage, pour valoriser son image, nourrir sa démarche RSE et offrir à ses équipes un cadre de travail plus inspirant. Pour en parler, utilisez le formulaire de contact : l’équipe d’InRealArt vous recontacte.",
   },
 ];
 

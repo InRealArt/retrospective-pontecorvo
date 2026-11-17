@@ -21,6 +21,10 @@ export default function Contact() {
         <SecureForm
           action={submitContact}
           turnstileAction="contact"
+          successDialog={{
+            title: "Merci, votre demande est envoyée",
+            body: "L'équipe d'InRealArt revient vers vous très prochainement pour organiser votre visite ou vous adresser le catalogue de la rétrospective.",
+          }}
           className="relative grid min-w-0 gap-5 border border-line bg-surface p-6 sm:grid-cols-2 md:p-8 lg:col-span-7"
           statusClassName="text-sm text-ink-soft sm:col-span-2"
         >

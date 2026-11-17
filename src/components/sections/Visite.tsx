@@ -39,10 +39,10 @@ export default function Visite() {
             <div className="border-t border-line pt-4">
               <dt className="eyebrow">Contact</dt>
               <dd className="m-0 mt-2 text-lg text-ink">
-                +33 (0)6 45 97 65 58
+                +33 (0)6 03 42 53 82
                 <br />
-                <a className="link-accent" href="mailto:galerieleadouze@gmail.com">
-                  galerieleadouze@gmail.com
+                <a className="link-accent" href="mailto:teaminrealart@gmail.com">
+                  teaminrealart@gmail.com
                 </a>
               </dd>
             </div>

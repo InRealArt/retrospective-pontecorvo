@@ -21,9 +21,15 @@ const artworks = [
     src: '/images/le-convoi-serein.webp',
     alt: 'Le convoi serein, huile sur toile, Alain Pontecorvo',
   },
+  {
+    title: 'Rue Brown-Séquard',
+    details: 'Huile sur toile · 81 × 60 cm · [année]',
+    src: '/images/rue-brown-sequard.webp',
+    alt: 'Rue Brown-Séquard, huile sur toile, Alain Pontecorvo',
+  },
 ]
 
-const placeholders = [0, 1]
+const placeholders = [0]
 
 export default function GaleriePhotos() {
   return (

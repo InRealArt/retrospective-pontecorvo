@@ -1,6 +1,7 @@
 'use client'
 
-import { useActionState, type ReactNode } from 'react'
+import { useActionState, useState, type ReactNode } from 'react'
+import { SuccessDialog } from './SuccessDialog'
 import { HONEYPOT_FIELD } from '../../lib/forms/constants'
 import { idleState, messageFor, type FormMessages, type FormState } from '../../lib/forms/state'
 import { TurnstileWidget } from './TurnstileWidget'
@@ -15,17 +16,22 @@ interface SecureFormProps {
   /** Class of the status line; the line has `data-state` set to idle, success or error. */
   statusClassName?: string
   messages?: Partial<FormMessages>
+  /** When set, a confirmation modal opens after a successful send. */
+  successDialog?: { title: string; body: string }
 }
 
 /**
  * Form shell: anti-spam trap, Turnstile challenge, submission state and visitor messages.
  * Only the fields and the submit button come from the page; no security code lives in the page.
  */
-export function SecureForm({ action, turnstileAction, children, className, statusClassName, messages }: SecureFormProps) {
+export function SecureForm({ action, turnstileAction, children, className, statusClassName, messages, successDialog }: SecureFormProps) {
   const [state, formAction, pending] = useActionState(action, idleState)
   const message = messageFor(state, messages)
+  const [dismissed, setDismissed] = useState<FormState | null>(null)
+  const dialogOpen = Boolean(successDialog) && state.status === 'success' && dismissed !== state
 
   return (
+    <>
     <form
       action={formAction}
       className={className}
@@ -47,5 +53,11 @@ export function SecureForm({ action, turnstileAction, children, className, statu
         {message}
       </p>
     </form>
+    {successDialog && (
+      <SuccessDialog open={dialogOpen} title={successDialog.title} onClose={() => setDismissed(state)}>
+        <p>{successDialog.body}</p>
+      </SuccessDialog>
+    )}
+    </>
   )
 }
