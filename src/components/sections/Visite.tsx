@@ -50,11 +50,15 @@ export default function Visite() {
         </Reveal>
         <Reveal
           delay={0.06}
-          className="flex min-h-96 min-w-0 items-center justify-center border border-line bg-paper-alt text-sm text-ink-soft lg:col-span-7"
+          className="relative min-h-96 min-w-0 overflow-hidden border border-line bg-paper-alt lg:col-span-7"
         >
-          <div role="img" aria-label="Emplacement carte : Galerie Leadouze, 16 avenue Matignon" className="flex h-full w-full items-center justify-center">
-            [Carte : 16 avenue Matignon]
-          </div>
+          <iframe
+            title="Plan d'accès — Galerie Leadouze"
+            src="https://www.google.com/maps?q=Galerie%20Leadouze%2C%2016%20avenue%20Matignon%2C%2075008%20Paris&z=16&output=embed"
+            className="absolute inset-0 h-full w-full border-0 grayscale"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
         </Reveal>
       </div>
     </section>
