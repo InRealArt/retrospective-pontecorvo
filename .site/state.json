@@ -45,6 +45,10 @@
     "build:visite": {
       "status": "done",
       "inputsHash": "a2bbc46d4c485444816575eaa401483ab2918e399eb09d6c06cad733cd5c39a4"
+    },
+    "build:contact": {
+      "status": "done",
+      "inputsHash": "3c98b5bbd25a5c230c382eda29f5f09ae9adc6b6ee49d35b97779574ebef9f0a"
     }
   },
   "modules": {},
