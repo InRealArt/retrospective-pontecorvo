@@ -38,9 +38,9 @@ export default function Regards() {
               <blockquote className="font-serif-title text-3xl italic md:text-4xl lg:text-5xl">
                 {q.quote}
               </blockquote>
-              <figcaption className="flex items-center gap-4 border-t border-line-on-dark pt-6">
-                <div className="relative size-14 flex-none overflow-hidden bg-paper-soft">
-                  <Image src={q.photo} alt={q.alt} fill sizes="56px" className="object-cover object-top" />
+              <figcaption className="flex items-center gap-6 border-t border-line-on-dark pt-6">
+                <div className="relative size-24 flex-none overflow-hidden bg-paper-soft md:size-32 lg:size-40">
+                  <Image src={q.photo} alt={q.alt} fill sizes="(min-width: 1024px) 160px, (min-width: 768px) 128px, 96px" className="object-cover object-top" />
                 </div>
                 <div>
                   <div className="font-semibold">{q.name}</div>
