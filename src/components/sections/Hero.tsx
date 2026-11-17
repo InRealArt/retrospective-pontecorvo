@@ -20,7 +20,7 @@ export default function Hero() {
           <dl className="rule grid gap-4 pt-4 sm:grid-cols-3">
             <div className="flex flex-col gap-1">
               <dt className="eyebrow text-ink-soft">Dates</dt>
-              <dd className="text-base">[Du JJ mois au JJ mois 2026]</dd>
+              <dd className="text-base">Du 13 novembre au 12 décembre 2026</dd>
             </div>
             <div className="flex flex-col gap-1">
               <dt className="eyebrow text-ink-soft">Lieu</dt>

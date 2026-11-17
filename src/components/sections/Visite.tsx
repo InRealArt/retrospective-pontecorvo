@@ -20,7 +20,7 @@ export default function Visite() {
             </div>
             <div className="border-t border-line pt-4">
               <dt className="eyebrow">Dates</dt>
-              <dd className="m-0 mt-2 text-lg text-ink">[Du JJ mois au JJ mois 2026]</dd>
+              <dd className="m-0 mt-2 text-lg text-ink">Du 13 novembre au 12 décembre 2026</dd>
             </div>
             <div className="border-t border-line pt-4">
               <dt className="eyebrow">Horaires</dt>

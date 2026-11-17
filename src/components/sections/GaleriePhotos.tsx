@@ -33,8 +33,8 @@ export default function GaleriePhotos() {
           <Reveal className="md:col-span-7 md:row-span-2">
             <div className="relative aspect-[5/3] h-full min-h-64 w-full bg-line-strong">
               <Image
-                src="/images/galerie/gallerie_lea12_1.webp"
-                alt="Salle d'exposition de la Galerie Leadouze"
+                src="/images/exposition/Discussion_en_galerie_dart_moderne.webp"
+                alt="Alexandre Leadouze s'adressant aux invités lors du vernissage"
                 fill
                 sizes="(min-width: 768px) 58vw, 100vw"
                 className="object-cover"
@@ -44,8 +44,8 @@ export default function GaleriePhotos() {
           <Reveal delay={0.08} className="md:col-span-5">
             <div className="relative aspect-[4/3] w-full bg-line-strong">
               <Image
-                src="/images/galerie/gallerie_lea12_2.webp"
-                alt="Mezzanine de la Galerie Leadouze"
+                src="/images/exposition/Reception_cocktail_en_galerie_dart.webp"
+                alt="Réception en galerie lors du vernissage de la rétrospective"
                 fill
                 sizes="(min-width: 768px) 42vw, 100vw"
                 className="object-cover"
@@ -53,12 +53,14 @@ export default function GaleriePhotos() {
             </div>
           </Reveal>
           <Reveal delay={0.16} className="md:col-span-5">
-            <div
-              role="img"
-              aria-label="Emplacement image : vue d'accrochage"
-              className="flex aspect-[4/3] items-center justify-center bg-line-strong p-4 text-center text-sm text-ink-soft"
-            >
-              [Image : vue d&apos;accrochage]
+            <div className="relative aspect-[4/3] w-full bg-line-strong">
+              <Image
+                src="/images/exposition/Retrospective.webp"
+                alt="Alain Pontecorvo assis devant ses toiles à la Galerie Leadouze"
+                fill
+                sizes="(min-width: 768px) 42vw, 100vw"
+                className="object-cover object-[50%_60%]"
+              />
             </div>
           </Reveal>
         </div>
