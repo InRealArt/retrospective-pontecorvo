@@ -41,6 +41,10 @@
     "build:collectionner": {
       "status": "done",
       "inputsHash": "3941563cfc83de0f26f3217e2b584183be0861f243c1d0d2df7f510f44f98e17"
+    },
+    "build:visite": {
+      "status": "done",
+      "inputsHash": "a2bbc46d4c485444816575eaa401483ab2918e399eb09d6c06cad733cd5c39a4"
     }
   },
   "modules": {},
