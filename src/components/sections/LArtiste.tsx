@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Reveal } from "@/components/motion/Reveal";
 import { SplitText } from "@/components/motion/SplitText";
 
@@ -30,6 +31,17 @@ export default function LArtiste() {
           </Reveal>
         </div>
         <div className="flex min-w-0 flex-col lg:col-span-5">
+          <Reveal className="mb-6">
+            <div className="relative aspect-[4/5] w-full bg-line-strong">
+              <Image
+                src="/images/Alain.webp"
+                alt="Portrait d'Alain Pontecorvo, assis dans la Galerie Leadouze"
+                fill
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                className="object-cover object-[50%_62%]"
+              />
+            </div>
+          </Reveal>
           {timeline.map((item, i) => (
             <Reveal
               key={item.label}

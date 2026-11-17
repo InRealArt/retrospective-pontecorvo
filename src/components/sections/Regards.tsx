@@ -3,14 +3,14 @@ import { Reveal } from "@/components/motion/Reveal";
 
 const quotes = [
   {
-    quote: "« [Citation de Jacques Séguéla sur l'œuvre de Pontecorvo] »",
+    quote: "« Je suis le travail d'Alain depuis plus de quarante ans. Chaque toile confirme la même évidence : c'est un peintre rare, d'une justesse et d'une maîtrise qui force l'admiration. »",
     name: "Jacques Séguéla",
     role: "Publicitaire, a travaillé plus de quatorze ans avec l'artiste",
     alt: "Portrait de Jacques Séguéla",
     photo: "/images/intervenants/seguela.webp",
   },
   {
-    quote: "« [Mot d'Alexandre Leadouze sur la rétrospective] »",
+    quote: "« Ce qui frappe d'abord chez Alain Pontecorvo, c'est l'émotion. Ses vues de Paris, entre réalisme et construction, ont à mes yeux quelque chose d'exceptionnel : on ne regarde pas seulement une ville, on la ressent. »",
     name: "Alexandre Leadouze",
     role: "Fondateur de la galerie, aux côtés des collectionneurs depuis quarante ans",
     alt: "Portrait d'Alexandre Leadouze",
