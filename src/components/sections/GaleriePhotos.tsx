@@ -99,11 +99,6 @@ export default function GaleriePhotos() {
                 <dt className="text-ink-soft">Statut</dt>
                 <dd>Disponible à l&apos;acquisition</dd>
               </dl>
-              <div>
-                <a href="#contact" className="btn-perrotin">
-                  Demander le dossier de l&apos;œuvre
-                </a>
-              </div>
             </Reveal>
           </div>
         </div>
