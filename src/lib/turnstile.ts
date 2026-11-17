@@ -45,6 +45,8 @@ export async function verifyTurnstile(a: VerifyArgs): Promise<VerifyResult> {
 
   if (data.success !== true) return { ok: false, reason: 'rejected' }
   if (data.action !== a.expectedAction) return { ok: false, reason: 'action-mismatch' }
-  if (data.hostname !== a.expectedHostname) return { ok: false, reason: 'hostname-mismatch' }
+  // Several hostnames can be allowed, separated by commas (production domain, www, preview).
+  const allowed = a.expectedHostname.split(',').map((h) => h.trim()).filter(Boolean)
+  if (typeof data.hostname !== 'string' || !allowed.includes(data.hostname)) return { ok: false, reason: 'hostname-mismatch' }
   return { ok: true }
 }

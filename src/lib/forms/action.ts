@@ -43,11 +43,16 @@ export async function handleForm(a: HandleFormArgs): Promise<FormResult> {
     expectedAction: a.turnstile.action,
     expectedHostname: a.turnstile.hostname,
   })
-  if (!check.ok) return { ok: false, error: 'captcha' }
+  if (!check.ok) {
+    // The visitor only sees a generic message: the reason goes to the server logs for the operator.
+    console.warn('turnstile verification failed', check.reason)
+    return { ok: false, error: 'captcha' }
+  }
 
   try {
     await a.send(data)
-  } catch {
+  } catch (error) {
+    console.error('form send failed', error)
     return { ok: false, error: 'mail' }
   }
   return { ok: true }

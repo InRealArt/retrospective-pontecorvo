@@ -26,7 +26,10 @@ interface SecureFormProps {
  */
 export function SecureForm({ action, turnstileAction, children, className, statusClassName, messages, successDialog }: SecureFormProps) {
   const [state, formAction, pending] = useActionState(action, idleState)
-  const message = messageFor(state, messages)
+  const [verified, setVerified] = useState(false)
+  const [waiting, setWaiting] = useState(false)
+  const needsChallenge = Boolean(process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY)
+  const message = waiting && !verified ? 'Vérification anti-spam en cours, réessayez dans un instant.' : messageFor(state, messages)
   const [dismissed, setDismissed] = useState<FormState | null>(null)
   const dialogOpen = Boolean(successDialog) && state.status === 'success' && dismissed !== state
 
@@ -39,6 +42,11 @@ export function SecureForm({ action, turnstileAction, children, className, statu
       data-pending={pending || undefined}
       onSubmit={(event) => {
         if (pending) event.preventDefault()
+        // Without a token the server would refuse the request: wait for the challenge instead of spending the attempt.
+        if (needsChallenge && !verified) {
+          event.preventDefault()
+          setWaiting(true)
+        }
       }}
     >
       {children}
@@ -48,7 +56,14 @@ export function SecureForm({ action, turnstileAction, children, className, statu
           <input type="text" name={HONEYPOT_FIELD} tabIndex={-1} autoComplete="off" />
         </label>
       </div>
-      <TurnstileWidget action={turnstileAction} resetSignal={state} />
+      <TurnstileWidget
+        action={turnstileAction}
+        resetSignal={state}
+        onValidChange={(valid) => {
+          setVerified(valid)
+          if (valid) setWaiting(false)
+        }}
+      />
       <p role="status" aria-live="polite" className={statusClassName} data-state={state.status}>
         {message}
       </p>
