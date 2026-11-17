@@ -55,7 +55,7 @@ export default function Visite() {
           <iframe
             title="Plan d'accès — Galerie Leadouze"
             src="https://www.google.com/maps?q=Galerie%20Leadouze%2C%2016%20avenue%20Matignon%2C%2075008%20Paris&z=16&output=embed"
-            className="absolute inset-0 h-full w-full border-0 grayscale"
+            className="absolute inset-0 h-full w-full border-0"
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
