@@ -36,7 +36,7 @@ export default function Regards() {
                 {q.quote}
               </blockquote>
               <figcaption className="flex items-center gap-4 border-t border-line-on-dark pt-6">
-                <div role="img" aria-label={q.alt} className="size-14 flex-none rounded-full bg-paper-soft" />
+                <div role="img" aria-label={q.alt} className="size-14 flex-none bg-paper-soft" />
                 <div>
                   <div className="font-semibold">{q.name}</div>
                   <div className="text-sm text-paper-soft">{q.role}</div>

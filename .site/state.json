@@ -33,6 +33,10 @@
     "build:l-artiste": {
       "status": "done",
       "inputsHash": "28a236f1eaacfb5bea0987b212684525f020222915b6f86f9c8ce4f6f384c49b"
+    },
+    "build:regards": {
+      "status": "done",
+      "inputsHash": "6f23da32683c95e3a85dfb19faf283c06e90b772c25986098559ec982c09abf9"
     }
   },
   "modules": {},
