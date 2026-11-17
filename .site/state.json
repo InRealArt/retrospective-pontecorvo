@@ -29,6 +29,10 @@
     "build:galerie-photos": {
       "status": "done",
       "inputsHash": "2711a1f450a00e548a9d5e749264fd669d98e4fb455e64e1e78174be24f4182c"
+    },
+    "build:l-artiste": {
+      "status": "done",
+      "inputsHash": "28a236f1eaacfb5bea0987b212684525f020222915b6f86f9c8ce4f6f384c49b"
     }
   },
   "modules": {},
