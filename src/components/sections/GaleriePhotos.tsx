@@ -120,16 +120,16 @@ export default function GaleriePhotos() {
               <article className="luxury-card flex h-full flex-col gap-4 p-4">
                 <div className="relative aspect-[4/3] w-full bg-line-strong">
                   <Image
-                    src="/images/artworks/featured/pontecorvo_artwork.webp"
-                    alt="Burning Man, huile sur toile, 130 × 195 cm, Alain Pontecorvo"
+                    src="/images/ailleurs.webp"
+                    alt="Ailleurs, huile sur toile, 100 × 100 cm, Alain Pontecorvo"
                     fill
                     sizes="(min-width: 768px) 66vw, 100vw"
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </div>
                 <div>
-                  <h3 className="font-serif-title text-[1.5625rem] italic">Burning Man</h3>
-                  <p className="text-sm text-ink-soft">Huile sur toile · 130 × 195 cm · 2005</p>
+                  <h3 className="font-serif-title text-[1.5625rem] italic">Ailleurs</h3>
+                  <p className="text-sm text-ink-soft">Huile sur toile · 100 × 100 cm</p>
                 </div>
               </article>
             </Reveal>
