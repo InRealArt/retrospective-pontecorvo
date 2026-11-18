@@ -95,7 +95,7 @@ export default function GaleriePhotos() {
                 <dt className="text-ink-soft">Dimensions</dt>
                 <dd>130 × 195 cm</dd>
                 <dt className="text-ink-soft">Année</dt>
-                <dd>2025</dd>
+                <dd>2005</dd>
                 <dt className="text-ink-soft">Statut</dt>
                 <dd>Disponible à l&apos;acquisition</dd>
               </dl>
@@ -129,7 +129,7 @@ export default function GaleriePhotos() {
                 </div>
                 <div>
                   <h3 className="font-serif-title text-[1.5625rem] italic">Burning Man</h3>
-                  <p className="text-sm text-ink-soft">Huile sur toile · 130 × 195 cm · 2025</p>
+                  <p className="text-sm text-ink-soft">Huile sur toile · 130 × 195 cm · 2005</p>
                 </div>
               </article>
             </Reveal>
